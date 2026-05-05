@@ -79,13 +79,11 @@
   </div>
 
   <script>
-    // YAHAN SIRF APNI GITHUB RAW LINK DAAL 👇
-    const apkUrl = "https://github.com/tera-username/my-apk-store/raw/main/App-Release.apk"; 
+    // TERA LINK YAHAN DAAL DIYA HAI ✅
+    const apkUrl = "https://raw.githubusercontent.com/Vedprakash3/Apk-CV/refs/heads/main/App-Release.apk"; 
     
-    // Download hone wali file ka naam
     const apkFileName = "App-Release.apk";
     
-    // File size auto nikalne ke liye
     fetch(apkUrl, { method: 'HEAD' }).then(res => {
       const size = res.headers.get('content-length');
       if(size) {
@@ -98,18 +96,12 @@
     });
 
     function downloadAPK() {
-      if(apkUrl.includes("tera-username")) {
-        alert("Bhai pehle code mein apni GitHub Raw link daal 😅");
-        return;
-      }
-      
       const link = document.createElement('a');
       link.href = apkUrl;
       link.download = apkFileName;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
       alert("Download shuru ho gaya! Downloads folder check kar 📂");
     }
   </script>
